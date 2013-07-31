@@ -1,3 +1,5 @@
+define(function(require, exports, module) {
+
 /**
 * XMLHttpRequest.js Copyright (C) 2011 Sergey Ilinsky (http://www.ilinsky.com)
 *
@@ -15,9 +17,6 @@
 * along with this library; if not, write to the Free Software Foundation, Inc.,
 * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 */
-
-(function () {
-
 	// Save reference to earlier defined object implementation (if any)
 	var oXMLHttpRequest = window.XMLHttpRequest;
 	
@@ -531,6 +530,6 @@
 	}
 
 	// Register new object with window
-	window.XMLHttpRequest = cXMLHttpRequest;
+	exports.XMLHttpRequest = cXMLHttpRequest;
 
-})();
+});
